@@ -1,0 +1,112 @@
+@import "_colors.scss";
+
+.react-responsive-modal-modal {
+  border-radius: 0.9375rem;
+}
+
+.card-modal {
+  display: flex;
+
+  @keyframes customEnterOverlayAnimation {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes customLeaveOverlayAnimation {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+
+  @keyframes customEnterModalAnimation {
+    0% {
+      transform: scale(0.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes customLeaveModalAnimation {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.2);
+    }
+  }
+
+  &-content {
+    padding: 0.9375rem 0.625rem;
+
+    &-group {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &-text {
+        color: $Color-7;
+        font-size: 1.125rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        margin-top: 0.8rem;
+      }
+
+      &-buttons {
+        display: flex;
+        justify-content: space-evenly;
+
+        &-bt {
+          border-radius: 0.625rem;
+          box-shadow: 0 0.25rem 0.625rem 0 rgba(0, 0, 0, 0.2),
+            0 0.1875rem 0.375rem 0 rgba(0, 0, 0, 0.1);
+          margin-top: 0.5rem;
+          padding: 0.4375rem 1.375rem;
+          width: 4.5625rem;
+
+          &.yes {
+            background-color: $Color-danger;
+            border: none;
+            color: $Color-5;
+            cursor: pointer;
+          }
+
+          &.yes:active {
+            transform: translateY(0.125rem);
+          }
+
+          &:hover {
+            background-color: $Color-danger-hover;
+            border: none;
+            color: $Color-5;
+            cursor: pointer;
+            transition: all 0.1s;
+          }
+
+          &.not {
+            background-color: $Color-success;
+            border: none;
+            color: $Color-5;
+            cursor: pointer;
+          }
+
+          &.not:active {
+            transform: translateY(0.125rem);
+          }
+
+          &.not:hover {
+            background-color: $Color-success-hover;
+            border: none;
+            color: $Color-5;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
