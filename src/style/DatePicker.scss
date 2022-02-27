@@ -1,0 +1,36 @@
+@import "./_colors.scss";
+
+.react-datepicker__header {
+  background-color: $Color-3 !important;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name {
+  color: $Color-5 !important;
+}
+
+.react-datepicker__day {
+  color: $Color-date-active !important;
+}
+
+.react-datepicker__day--disabled {
+  color: $Color-date-disabled !important;
+}
+
+.react-datepicker__year-option {
+  color: $Color-7;
+}
+
+.react-datepicker__header__dropdown--scroll {
+  color: $Color-5;
+  margin: 5px;
+}
+
+input.react-datepicker__header {
+  background-color: $Color-5 !important;
+  border-radius: 3.125rem !important;
+  border: 0 none;
+  color: $Color-1;
+  display: block;
+  margin: 0.625rem auto;
+}
