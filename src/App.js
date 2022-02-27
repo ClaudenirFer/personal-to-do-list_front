@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Add from "./pages/Add/Add";
+import DeleteTask from "./pages/DeleteTask/DeleteTask";
+import Footer from "./components/shared/Footer/Footer";
+import Header from "./components/shared/Header/Header";
+import Home from "./pages/Home/Home";
+import View from "./pages/View/View";
+import { Routes, Route } from "react-router-dom";
+
+// CSS
+import "./App.scss";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/add" element={<Add />} />
+        <Route path="/view/:id" element={<View />} />
+        <Route path="/delete/:id" element={<DeleteTask />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
