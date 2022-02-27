@@ -1,0 +1,9 @@
+@import "../../style/colors";
+.home {
+  align-items: center;
+  background-color: $Color-2;
+  display: flex;
+  font-size: 0.875rem;
+  justify-content: center;
+  min-height: calc(100vh - 212px);
+}
